@@ -39,7 +39,6 @@ process.on('SIGTERM', function(){
 
 var dbURI = 'mongodb://localhost/Loc8r';
 if(process.env.NODE_ENV === 'production'){
-  //dbURI = 'mongodb://heroku_fr0tj1t0:bhot6uhnjkabq9tptr59hffhba@ds019063.mlab.com:19063/heroku_fr0tj1t0'
   dbURI = process.env.MONGODB_URI;
 }
 mongoose.connect(dbURI);
